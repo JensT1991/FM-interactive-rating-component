@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Interactive rating component</title>
+
+  <link rel="stylesheet" href="style.css">
+  <script src="./script.js" defer></script>
+</head>
+<body>
+
+  <div class="wrapper center">
+
+    <!-- Rating state start -->
+    <div class="card">
+
+      <div class="icon-wrapper center">
+        <img alt="star" src="./images/icon-star.svg" height="18" width="18"/>
+      </div>
+      
+      <h1>How did we do?</h1>
+
+      <p>Please let us know how we did with your support request. All feedback is appreciated 
+      to help us improve our offering!</p>
+
+      <form name="ratings" onsubmit="return validateRating();">
+
+        <div class="ratings" >
+
+          <input type="radio" id="star-1" name="rating" value="1">
+          <label for="star-1">1</label>
+
+          <input type="radio" id="star-2" name="rating" value="2">
+          <label for="star-2">2</label>
+
+          <input type="radio" id="star-3" name="rating" value="3">
+          <label for="star-3">3</label>
+
+          <input type="radio" id="star-4" name="rating" value="4">
+          <label for="star-4">4</label>
+
+          <input type="radio" id="star-5" name="rating" value="5">
+          <label for="star-5">5</label>
+
+        </div>
+
+        <input type="submit" value="Submit" id="submit" class="btn">
+
+      </form>
+
+    </div>
+    <!-- Rating state end -->
+
+    <!-- Thank you state start -->
+    <div class="card text-center hidden">
+
+      <img width="162" height="108" alt="smartphone that shows that the input was received" src="./images/illustration-thank-you.svg"/>
+      
+      <div class="rated">You selected <span class="rating-output" id="rating-output"></span> out of 5</div>
+
+      <h1>Thank you!</h1>
+
+      <p>We appreciate you taking the time to give a rating. If you ever need more support, 
+      don’t hesitate to get in touch!</p>
+
+    </div>
+    <!-- Thank you state end -->
+
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Jens Trautmann</a>.
+    </div>
+
+  </div>
+
+</body>
+</html>
